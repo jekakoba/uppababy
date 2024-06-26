@@ -1,0 +1,166 @@
+.products {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 24px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style: none;
+	gap: 48px;
+	&:not(:last-child) {
+		margin-bottom: 64px;
+	}
+	@media (max-width: 1024px) {
+		gap: 32px;
+		&:not(:last-child) {
+			margin-bottom: 32px;
+		}
+	}
+
+	// .products__item
+
+	&__item {
+	}
+
+	&_big {
+		.item-product {
+			@media (max-width: 767.98px) {
+				flex-basis: 100%;
+			}
+		}
+	}
+	&_small {
+		.item-product {
+		}
+	}
+}
+.item-product {
+	flex-basis: calc(33% - 28px);
+	color: rgb(32, 32, 32);
+	background-color: rgb(228, 228, 228);
+	@media (max-width: 1260px) {
+		flex-basis: calc(50% - 28px);
+	}
+	@media (max-width: 767.98px) {
+		flex-basis: auto;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		height: 100%;
+	}
+	// .item-product__image
+
+	&__image {
+		width: 100%;
+		position: relative;
+		padding-bottom: 100%;
+		will-change: transform;
+		overflow: hidden;
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+			transition: transform 1s;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				img {
+					transform: scale(1.008);
+				}
+			}
+		}
+	}
+
+	&__image,
+	&__icon {
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__icon {
+		width: 60px;
+		height: 60px;
+		position: relative;
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: contain;
+		}
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		padding: 0 32px 32px 32px;
+		height: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+
+	// .item-product__title
+
+	&__title {
+		line-height: 1.25;
+		font-size: 32px;
+		font-weight: inherit;
+		&:not(:last-child) {
+			margin: 0 0 24px 0;
+		}
+		@media (max-width: 1024px) {
+			font-size: 24px;
+		}
+	}
+
+	// .item-product__button
+
+	&__button {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		border: 2px solid #202020;
+		color: #202020;
+		padding: 12px 48px;
+		font-size: toRem(16);
+		border-radius: 32px;
+		line-height: 1.2;
+		transition: all 0.3s;
+		text-decoration: none;
+		@media (any-hover: hover) {
+			&:hover {
+				color: white;
+				background-color: black;
+			}
+		}
+		@media (min-width: 767.98px) {
+			margin-top: auto;
+		}
+		@media (max-width: 767.98px) {
+			padding: 10px 16px;
+		}
+	}
+
+	&_icon {
+		min-height: 300px;
+		padding-top: 32px;
+		@media (max-width: 1260px) {
+			min-height: 294px;
+		}
+		@media (max-width: 767.98px) {
+			min-height: auto;
+		}
+	}
+}
