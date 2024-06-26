@@ -122,8 +122,5 @@ body {
 // @import "common";`
 
 // Підключення стилів окремих блоків
-// @import "header";
-// @import "footer";
-
-// Підключення стилів окремих сторінок
-@import "home";
+@import "products";
+@import "strollers";
