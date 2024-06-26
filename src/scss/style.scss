@@ -120,8 +120,9 @@ body {
 // @import "base";
 
 // Підключення стилів загальних елементів проекту
-// @import "common";`
+@import "common";
 
 // Підключення стилів окремих блоків
 @import "products";
 @import "strollers";
+@import "support";
